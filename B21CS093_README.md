@@ -116,4 +116,55 @@ Welcome to the XV Quiz for CSL 3030 - Operating Systems!
 20. Outline the steps involved in the boot process of XV6. What happens from the moment the computer is powered on to when the XV6 kernel is loaded into memory?
 
 ## Answers
-Please write your answers here
+
+Ans 1:- A Unit-like operating system
+Ans 2:- BSD
+Ans 3:- Simple
+Ans 4:- As Interrupts
+Ans 5:- 128
+Ans 6:- Sh
+Ans 7:- Round-Robin scheduling
+Ans 8:- Paging
+Ans 9:- Both b and c
+Ans 10:- No
+Ans 11:- MIT
+
+Ans 12:- In XV6, a process can be in one of the following states:
+
+   UNUSED: The process table entry is not in use.
+   EMBRYO: The process is in the process of being created.
+   SLEEPING: The process is waiting for some event to occur.
+   RUNNABLE: The process is ready to run but waiting for the CPU.
+   RUNNING: The process is currently being executed.
+   ZOMBIE: The process has terminated but is still in the process table until the parent acknowledges its termination.
+
+Ans 13:- The XV6 file system has a simple structure. Key components include:
+
+   Superblock: Contains information about the file system, such as the number of blocks and inodes.
+   Inodes: Represent files and directories and store metadata.
+   Data Blocks: Store file contents and directory information.
+   Root Directory: The top-level directory in the file system.
+
+Ans 14:-    System Calls: Interface between user programs and the operating system kernel. Examples in XV6 include fork(), exec(), and exit().
+            Library Functions: Provided by C libraries and are not part of the kernel. They are built on top of system calls. Examples in XV6 include printf(), scanf(), etc.
+
+Ans 15:-     Paging in XV6 works as the memory is divided into fixed-size pages, and the page table is used to map virtual addresses to physical addresses.
+             Benefits: Allows for efficient use of memory, enables easy sharing of code and data, and facilitates the implementation of virtual memory.
+
+Ans 16:- ls: Lists directory contents.
+         cd: Changes the current directory.
+         cp: Copies files or directories.
+
+Ans 17:-     Process synchronization ensures orderly execution of processes. It is essential to prevent conflicts and data corruption.
+             Mechanisms: XV6 uses techniques like locks and semaphores for synchronization.
+
+Ans 18:-     Role of Interrupts: Interrupts are used to signal the CPU that an event has occurred and requires immediate attention.
+             Handling: XV6 handles interrupts using interrupt service routines (ISRs) that are invoked in response to specific interrupt signals.
+
+Ans 19:-     Virtual Memory: Provides the illusion of a larger, contiguous memory space than physically available.
+             Implementation in XV6: Achieved through paging, allowing processes to have their own virtual address space.
+             Advantages: Enables efficient memory utilization and process isolation.
+             
+Ans 20 :-     Power On: CPU initializes, and the BIOS/UEFI firmware is executed.
+              Bootloader: Loads the XV6 bootloader, which in turn loads the XV6 kernel into memory.
+              Kernel Initialization: XV6 kernel initializes the system, sets up memory, and begins executing the first user-level process.
